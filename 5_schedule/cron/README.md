@@ -1,10 +1,14 @@
 # Exercice CRON
 
+Installer cron si la commande ne fonctionne pas
+
+`crontab -l`
+
 Se rendre dans le répertoire courant.
 
 Rendre le script executable
 
-`chmod +x ~/append_line.sh`
+`chmod +x my_cron_script.sh`
 
 Editer le crontab
 
@@ -12,4 +16,14 @@ Editer le crontab
 
 Configuration
 
-`* * * * * ~/append_line.sh`
+`* * * * * CHEMIN_VERS_VOTRE_SCRIPT/my_cron_script.sh`
+
+Afficher le fichier de log
+
+`cat ~/cron_test.log`
+
+Commentez la ligne pour desactiver le CRON :
+
+`crontab -e`
+
+`# * * * * * CHEMIN_VERS_VOTRE_SCRIPT/my_cron_script.sh`
